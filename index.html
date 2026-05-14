@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Nuria — Peluquería</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">Studio Nuria</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#reserva">Reservar</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-sub">Bienvenida a</p>
+      <h1>Studio Nuria</h1>
+      <p class="hero-desc">PRUEBA MS</p>
+      <a href="#reserva" class="btn-primary">Reservar cita</a>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="container">
+      <h2 class="section-title">Servicios & Precios</h2>
+      <p class="section-sub">Tratamientos personalizados para cada tipo de cabello</p>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">✂️</div>
+          <h3>Corte de pelo</h3>
+          <p>Corte personalizado adaptado a tu estilo y tipo de rostro.</p>
+          <span class="price">desde 25 €</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Color & Tinte</h3>
+          <p>Coloraciones, mechas, balayage y técnicas de color avanzadas.</p>
+          <span class="price">desde 45 €</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💆</div>
+          <h3>Tratamientos</h3>
+          <p>Hidratación, keratina, mascarillas y cuidado capilar profundo.</p>
+          <span class="price">desde 35 €</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">💍</div>
+          <h3>Peinado & Recogidos</h3>
+          <p>Peinados para bodas, eventos especiales y ocasiones únicas.</p>
+          <span class="price">desde 40 €</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🌊</div>
+          <h3>Permanente & Alisado</h3>
+          <p>Ondulaciones permanentes y alisados duraderos profesionales.</p>
+          <span class="price">desde 60 €</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Lavado & Secado</h3>
+          <p>Lavado con productos premium y secado con moldeado incluido.</p>
+          <span class="price">desde 15 €</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria">
+    <div class="container">
+      <h2 class="section-title">Galería</h2>
+      <p class="section-sub">Algunos de nuestros trabajos más recientes</p>
+      <div class="gallery-grid">
+        <div class="gallery-item" style="background-color:#c9b99a;" data-label="Balayage natural"></div>
+        <div class="gallery-item" style="background-color:#8b6f6f;" data-label="Color caoba"></div>
+        <div class="gallery-item" style="background-color:#d4c5a9;" data-label="Mechas rubias"></div>
+        <div class="gallery-item" style="background-color:#6d5a5a;" data-label="Rojo vibrante"></div>
+        <div class="gallery-item" style="background-color:#b8a898;" data-label="Corte bob"></div>
+        <div class="gallery-item" style="background-color:#a08070;" data-label="Recogido novia"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVA -->
+  <section id="reserva">
+    <div class="container">
+      <h2 class="section-title">Reservar Cita</h2>
+      <p class="section-sub">Elige tu servicio y te confirmamos la cita en 24 horas</p>
+      <form class="booking-form" id="booking-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" placeholder="600 000 000" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="servicio">Servicio</label>
+            <select id="servicio" required>
+              <option value="">Selecciona un servicio</option>
+              <option>Corte de pelo</option>
+              <option>Color & Tinte</option>
+              <option>Tratamientos</option>
+              <option>Peinado & Recogidos</option>
+              <option>Permanente & Alisado</option>
+              <option>Lavado & Secado</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fecha">Fecha preferida</label>
+            <input type="date" id="fecha" required />
+          </div>
+        </div>
+        <div class="form-group full">
+          <label for="mensaje">Comentarios (opcional)</label>
+          <textarea id="mensaje" rows="3" placeholder="Cuéntanos más sobre lo que buscas..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Solicitar cita</button>
+      </form>
+      <div id="booking-success" class="booking-success hidden">
+        <span>✅</span> ¡Solicitud enviada! Te confirmaremos tu cita en breve.
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h2 class="section-title left">Encuéntranos</h2>
+        <div class="contact-item">
+          <span>📍</span>
+          <div>
+            <strong>Dirección</strong>
+            <p>Calle Gran Vía 42, Madrid 28013</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span>📞</span>
+          <div>
+            <strong>Teléfono</strong>
+            <p>+34 91 000 00 00</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span>🕐</span>
+          <div>
+            <strong>Horario</strong>
+            <p>Lun–Vie: 9:00 – 20:00<br/>Sábado: 9:00 – 18:00<br/>Domingo: Cerrado</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span>📧</span>
+          <div>
+            <strong>Email</strong>
+            <p>hola@studionuria.es</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <div class="map-inner">
+          <p>📍 Studio Nuria</p>
+          <p>Gran Vía 42, Madrid</p>
+          <a href="https://maps.google.com" target="_blank" class="btn-outline">Ver en Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Studio Nuria — Todos los derechos reservados</p>
+    <div class="social-links">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="TikTok">TikTok</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

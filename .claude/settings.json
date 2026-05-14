@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/nuriahormaechea/Documents/GitHub/pruebaMS && git add -A && git diff --cached --quiet || (git commit -m \"Auto-save changes\" && git push origin main)",
+            "timeout": 30,
+            "statusMessage": "Guardando en GitHub..."
+          }
+        ]
+      }
+    ]
+  }
+}
